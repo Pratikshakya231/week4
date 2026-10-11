@@ -1,0 +1,421 @@
+
+:root {
+    --ink: #172033;
+    --paper: #f7f8fc;
+    --panel: #ffffff;
+    --tea: #5265d8;
+    --accent: #4778c7;
+    --muted: #626b7b;
+    --line: #dce1eb;
+    --focus: #247d9b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    color: var(--tea);
+    line-height: 1.25;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+/* Header and navigation */
+
+.site-header {
+    background-color: var(--ink);
+    color: white;
+}
+
+.site-header .wrapper {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-header h1 {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #354057;
+}
+
+/* Main content */
+
+main {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+/* About section */
+
+#aboutMe p {
+    max-width: 75ch;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 1rem 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--line);
+}
+
+#aboutMe dl {
+    max-width: 65ch;
+}
+
+#aboutMe dt {
+    margin-top: 1.5rem;
+    color: var(--tea);
+    font-weight: bold;
+}
+
+#aboutMe dd {
+    margin: 0.5rem 0 0 1rem;
+    color: var(--muted);
+}
+
+/* Projects section */
+
+#projects article {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+
+    background-color: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    box-shadow: 0 3px 12px rgba(23, 32, 51, 0.04);
+}
+
+#projects article h3 {
+    margin-top: 0;
+}
+
+#projects article:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact form */
+
+form {
+    max-width: 35rem;
+}
+
+form p {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+
+    font: inherit;
+    color: var(--ink);
+    background-color: white;
+
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--focus);
+    outline: 2px solid var(--focus);
+}
+
+button[type="submit"] {
+    background-color: var(--accent);
+    color: white;
+
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--tea);
+}
+
+#form-status {
+    color: var(--muted);
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    padding: 1.25rem;
+
+    text-align: center;
+    background-color: var(--ink);
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Image slider */
+
+.slider {
+    --slider-duration: 500ms;
+    --slider-ctrl-bg: rgba(23, 32, 51, 0.65);
+    --slider-ctrl-bg-hover: rgba(23, 32, 51, 0.9);
+
+    position: relative;
+    width: 100%;
+    max-width: 56rem;
+    margin: 1rem auto 0;
+
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--ink);
+}
+
+.slider__track {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    transition: transform var(--slider-duration) ease-in-out;
+    will-change: transform;
+}
+
+.slider__track.is-instant {
+    transition: none;
+}
+
+.slider__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+.slider__slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+    border-radius: 0;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Slider arrows */
+
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: grid;
+    place-items: center;
+
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background-color: var(--slider-ctrl-bg);
+    color: white;
+
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.slider__arrow:hover {
+    background-color: var(--slider-ctrl-bg-hover);
+}
+
+.slider__arrow--prev {
+    left: 0.75rem;
+}
+
+.slider__arrow--next {
+    right: 0.75rem;
+}
+
+/* Slider navigation dots */
+
+.slider__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0.75rem;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+
+    border-radius: 999px;
+    background-color: var(--slider-ctrl-bg);
+}
+
+.slider__dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0;
+
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slider__dot.is-active {
+    background-color: white;
+}
+
+/* Responsive layout */
+
+@media (max-width: 40rem) {
+    .site-header .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.5rem;
+    }
+
+    main section {
+        padding: 2rem 0;
+    }
+
+    .slider {
+        aspect-ratio: 4 / 3;
+        border-radius: 0.5rem;
+    }
+
+    .slider__arrow {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .slider__arrow--prev {
+        left: 0.4rem;
+    }
+
+    .slider__arrow--next {
+        right: 0.4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .slider__track {
+        transition-duration: 1ms;
+    }
+}

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Shakya | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Pratik Shakya, an Information Technology student.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <h1>Pratik Shakya | Portfolio</h1>
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contactForm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="portfolioContent">
+        <section id="aboutMe">
+            <h2>About Me</h2>
+
+            <img src="images/pfp.jpeg" alt="Portrait of Pratik Shakya" class="profile-image">
+
+            <p>
+                I'm Pratik Shakya, an Information Technology student currently
+                pursuing my Bachelor's degree in Information Technology (BIT)
+                at Model Institute of Technology in Nepal. I'm interested in
+                software development, networking, computer systems, and
+                solving technical problems.
+            </p>
+
+            <p>
+                I enjoy learning new technologies and improving my programming
+                and practical IT skills. My academic work has helped me explore
+                programming, web development, databases, Linux, and computer
+                networking.
+            </p>
+
+            <h2>Skills</h2>
+
+            <dl>
+                <dt>Programming – C and Java</dt>
+                <dd>
+                    Understanding of programming fundamentals, problem-solving,
+                    algorithms, control structures, functions, and object-oriented
+                    programming concepts.
+                </dd>
+
+                <dt>Web Development – HTML, CSS and JavaScript</dt>
+                <dd>
+                    Knowledge of structuring web pages, styling interfaces,
+                    creating responsive layouts, and adding interactivity
+                    with JavaScript.
+                </dd>
+
+                <dt>Database Management – SQL</dt>
+                <dd>
+                    Understanding of database fundamentals, data organization,
+                    queries, and basic database management concepts.
+                </dd>
+
+                <dt>Linux and Computer Networking</dt>
+                <dd>
+                    Academic experience with Ubuntu, Linux commands, IP
+                    addressing, DNS, DHCP, and basic network configuration.
+                </dd>
+
+                <dt>Communication and Teamwork</dt>
+                <dd>
+                    Willingness to collaborate, learn from others, solve
+                    problems, and adapt to new working environments.
+                </dd>
+            </dl>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Inventory Management System</h3>
+                <p>
+                    An academic software engineering project focused on
+                    managing a store's inventory. The proposed system includes
+                    product management, searching and viewing products, stock
+                    tracking, and organizing inventory information.
+                </p>
+                <p>
+                    Technologies and concepts: software engineering,
+                    requirements analysis, system design, and programming.
+                </p>
+            </article>
+
+            <article>
+                <h3>Vanilla JavaScript Image Slider</h3>
+                <p>
+                    A responsive image slider created using HTML, CSS, and
+                    Vanilla JavaScript. The project demonstrates image
+                    transitions, interactive navigation, responsive styling,
+                    and DOM manipulation without relying on an external
+                    JavaScript slider library.
+                </p>
+            </article>
+
+            <article>
+                <h3>Linux and Networking Labs</h3>
+                <p>
+                    Academic lab exercises involving Ubuntu, network
+                    configuration, IP addressing, DNS, DHCP, and Linux
+                    system administration commands.
+                </p>
+            </article>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+
+            <div class="slider"
+                 data-slider
+                 role="region"
+                 aria-roledescription="carousel"
+                 aria-label="Portfolio gallery">
+
+                <ul class="slider__track">
+                    <li class="slider__slide">
+                        <img src="images/green-forest.png" alt="Portfolio gallery image one">
+                    </li>
+                    <li class="slider__slide">
+                        <img src="images/blue-sea.png" alt="Portfolio gallery image two">
+                    </li>
+                    <li class="slider__slide">
+                        <img src="images/yellow-desert.png" alt="Portfolio gallery image three">
+                    </li>
+                    <li class="slider__slide">
+                        <img src="images/orange-sunset.png" alt="Portfolio gallery image four">
+                    </li>
+                    <li class="slider__slide">
+                        <img src="images/purple-mountain.png" alt="Portfolio gallery image five">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contactForm">
+            <h2>Contact Me</h2>
+
+            <form id="contact-form">
+                <p>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName"
+                           placeholder="Enter your name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"
+                              placeholder="Write your message here"
+                              required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+
+                <p id="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pratik Shakya &bull; Kathmandu, Nepal</p>
+    </footer>
+
+    <script src="slider.js"></script>
+</body>
+</html>
